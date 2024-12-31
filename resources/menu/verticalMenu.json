@@ -1,0 +1,47 @@
+{
+  "menu": [
+    {
+      "url": "/",
+      "name": "Master",
+      "icon": "menu-icon tf-icons ti ti-smart-home",
+      "slug": "pages-home",
+      "submenu": [
+        {
+          "url": "admin/master/master-bank",
+          "name": "Master Bank",
+          "slug": "pages-master-bank"
+        },
+        {
+          "url": "admin/master/master-cabang-dpf",
+          "name": "Master Cabang DPF",
+          "slug": "pages-cabang"
+        },
+        {
+          "url": "admin/master/master-divisi",
+          "name": "Master Divisi",
+          "slug": "pages-divisi"
+        },
+        {
+          "url": "admin/master/master-posisi",
+          "name": "Master Posisi",
+          "slug": "pages-posisi"
+        },
+        {
+          "url": "admin/master/master-project",
+          "name": "Master Project",
+          "slug": "pages-project"
+        },
+        {
+          "url": "admin/master/master-task",
+          "name": "Master Task",
+          "slug": "pages-task"
+        },
+        {
+          "url": "admin/master/master-pegawai",
+          "name": "Master Pegawai",
+          "slug": "pages-pegawai"
+        }
+      ]
+    }
+  ]
+}
