@@ -1,11 +1,11 @@
 @php
-$configData = Helper::appClasses();
+    $configData = Helper::appClasses();
 @endphp
 
 @extends('layouts/layoutMaster')
 
-@section('title', 'Home')
+@section('title', 'Pegawai')
 
 @section('content')
-Master Pegawai
+    Master Pegawai
 @endsection

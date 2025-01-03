@@ -32,7 +32,7 @@ class AuthController extends Controller
             if (Hash::check($request->input('password'), $user->password)) {
                 $this->getUserInfo($email);
                 session(['login_time' => now()]); 
-                
+                // dd(session('userData'));
                 return redirect()->route('admin-dashboard');
             } else {
                 return back()->withErrors(['password' => 'Password salah']);

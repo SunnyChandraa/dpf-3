@@ -53,6 +53,7 @@
       22 => 'Illuminate\\View\\ViewServiceProvider',
       23 => 'App\\Providers\\AppServiceProvider',
       24 => 'App\\Providers\\MenuServiceProvider',
+      25 => 'Yajra\\DataTables\\DataTablesServiceProvider',
     ),
     'aliases' => 
     array (
@@ -114,8 +115,8 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\Software Development\\project\\Bootstrap5\\vite\\starter-kit\\storage\\framework/cache/data',
-        'lock_path' => 'C:\\Software Development\\project\\Bootstrap5\\vite\\starter-kit\\storage\\framework/cache/data',
+        'path' => 'C:\\Software Development\\project\\dpf 3\\storage\\framework/cache/data',
+        'lock_path' => 'C:\\Software Development\\project\\dpf 3\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -306,6 +307,62 @@
       ),
     ),
   ),
+  'datatables' => 
+  array (
+    'search' => 
+    array (
+      'smart' => true,
+      'multi_term' => true,
+      'case_insensitive' => true,
+      'use_wildcards' => false,
+      'starts_with' => false,
+    ),
+    'index_column' => 'DT_RowIndex',
+    'engines' => 
+    array (
+      'eloquent' => 'Yajra\\DataTables\\EloquentDataTable',
+      'query' => 'Yajra\\DataTables\\QueryDataTable',
+      'collection' => 'Yajra\\DataTables\\CollectionDataTable',
+      'resource' => 'Yajra\\DataTables\\ApiResourceDataTable',
+    ),
+    'builders' => 
+    array (
+    ),
+    'nulls_last_sql' => ':column :direction NULLS LAST',
+    'error' => NULL,
+    'columns' => 
+    array (
+      'excess' => 
+      array (
+        0 => 'rn',
+        1 => 'row_num',
+      ),
+      'escape' => '*',
+      'raw' => 
+      array (
+        0 => 'action',
+      ),
+      'blacklist' => 
+      array (
+        0 => 'password',
+        1 => 'remember_token',
+      ),
+      'whitelist' => '*',
+    ),
+    'json' => 
+    array (
+      'header' => 
+      array (
+      ),
+      'options' => 0,
+    ),
+    'callback' => 
+    array (
+      0 => '$',
+      1 => '$.',
+      2 => 'function',
+    ),
+  ),
   'filesystems' => 
   array (
     'default' => 'local',
@@ -314,13 +371,13 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Software Development\\project\\Bootstrap5\\vite\\starter-kit\\storage\\app',
+        'root' => 'C:\\Software Development\\project\\dpf 3\\storage\\app',
         'throw' => false,
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\Software Development\\project\\Bootstrap5\\vite\\starter-kit\\storage\\app/public',
+        'root' => 'C:\\Software Development\\project\\dpf 3\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
         'throw' => false,
@@ -340,7 +397,7 @@
     ),
     'links' => 
     array (
-      'C:\\Software Development\\project\\Bootstrap5\\vite\\starter-kit\\public\\storage' => 'C:\\Software Development\\project\\Bootstrap5\\vite\\starter-kit\\storage\\app/public',
+      'C:\\Software Development\\project\\dpf 3\\public\\storage' => 'C:\\Software Development\\project\\dpf 3\\storage\\app/public',
     ),
   ),
   'logging' => 
@@ -365,14 +422,14 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\Software Development\\project\\Bootstrap5\\vite\\starter-kit\\storage\\logs/laravel.log',
+        'path' => 'C:\\Software Development\\project\\dpf 3\\storage\\logs/laravel.log',
         'level' => 'debug',
         'replace_placeholders' => true,
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\Software Development\\project\\Bootstrap5\\vite\\starter-kit\\storage\\logs/laravel.log',
+        'path' => 'C:\\Software Development\\project\\dpf 3\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
         'replace_placeholders' => true,
@@ -437,7 +494,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'C:\\Software Development\\project\\Bootstrap5\\vite\\starter-kit\\storage\\logs/laravel.log',
+        'path' => 'C:\\Software Development\\project\\dpf 3\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -513,7 +570,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\Software Development\\project\\Bootstrap5\\vite\\starter-kit\\resources\\views/vendor/mail',
+        0 => 'C:\\Software Development\\project\\dpf 3\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -608,7 +665,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\Software Development\\project\\Bootstrap5\\vite\\starter-kit\\storage\\framework/sessions',
+    'files' => 'C:\\Software Development\\project\\dpf 3\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -762,9 +819,54 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\Software Development\\project\\Bootstrap5\\vite\\starter-kit\\resources\\views',
+      0 => 'C:\\Software Development\\project\\dpf 3\\resources\\views',
     ),
-    'compiled' => 'C:\\Software Development\\project\\Bootstrap5\\vite\\starter-kit\\storage\\framework\\views',
+    'compiled' => 'C:\\Software Development\\project\\dpf 3\\storage\\framework\\views',
+  ),
+  'livewire' => 
+  array (
+    'class_namespace' => 'App\\Livewire',
+    'view_path' => 'C:\\Software Development\\project\\dpf 3\\resources\\views/livewire',
+    'layout' => 'components.layouts.app',
+    'lazy_placeholder' => NULL,
+    'temporary_file_upload' => 
+    array (
+      'disk' => NULL,
+      'rules' => NULL,
+      'directory' => NULL,
+      'middleware' => NULL,
+      'preview_mimes' => 
+      array (
+        0 => 'png',
+        1 => 'gif',
+        2 => 'bmp',
+        3 => 'svg',
+        4 => 'wav',
+        5 => 'mp4',
+        6 => 'mov',
+        7 => 'avi',
+        8 => 'wmv',
+        9 => 'mp3',
+        10 => 'm4a',
+        11 => 'jpg',
+        12 => 'jpeg',
+        13 => 'mpga',
+        14 => 'webp',
+        15 => 'wma',
+      ),
+      'max_upload_time' => 5,
+      'cleanup' => true,
+    ),
+    'render_on_redirect' => false,
+    'legacy_model_binding' => false,
+    'inject_assets' => true,
+    'navigate' => 
+    array (
+      'show_progress_bar' => true,
+      'progress_bar_color' => '#2299dd',
+    ),
+    'inject_morph_markers' => true,
+    'pagination_theme' => 'tailwind',
   ),
   'flare' => 
   array (
@@ -850,7 +952,7 @@
     array (
     ),
     'enable_runnable_solutions' => NULL,
-    'remote_sites_path' => 'C:\\Software Development\\project\\Bootstrap5\\vite\\starter-kit',
+    'remote_sites_path' => 'C:\\Software Development\\project\\dpf 3',
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
     'settings_file_path' => '',
@@ -877,6 +979,126 @@
       9 => 'Spatie\\LaravelIgnition\\ArgumentReducers\\CollectionArgumentReducer',
       10 => 'Spatie\\Backtrace\\Arguments\\Reducers\\StringableArgumentReducer',
     ),
+  ),
+  'datatables-buttons' => 
+  array (
+    'namespace' => 
+    array (
+      'base' => 'DataTables',
+      'model' => 'App\\Models',
+    ),
+    'pdf_generator' => 'snappy',
+    'snappy' => 
+    array (
+      'options' => 
+      array (
+        'no-outline' => true,
+        'margin-left' => '0',
+        'margin-right' => '0',
+        'margin-top' => '10mm',
+        'margin-bottom' => '10mm',
+      ),
+      'orientation' => 'landscape',
+    ),
+    'parameters' => 
+    array (
+      'dom' => 'Bfrtip',
+      'order' => 
+      array (
+        0 => 
+        array (
+          0 => 0,
+          1 => 'desc',
+        ),
+      ),
+      'buttons' => 
+      array (
+        0 => 'excel',
+        1 => 'csv',
+        2 => 'pdf',
+        3 => 'print',
+        4 => 'reset',
+        5 => 'reload',
+      ),
+    ),
+    'generator' => 
+    array (
+      'columns' => 'id,add your columns,created_at,updated_at',
+      'buttons' => 'excel,csv,pdf,print,reset,reload',
+      'dom' => 'Bfrtip',
+    ),
+  ),
+  'datatables-html' => 
+  array (
+    'namespace' => 'LaravelDataTables',
+    'table' => 
+    array (
+      'class' => 'table',
+      'id' => 'dataTableBuilder',
+    ),
+    'script' => 'datatables::script',
+    'editor' => 'datatables::editor',
+  ),
+  'datatables-export' => 
+  array (
+    'method' => 'lazy',
+    'chunk' => 1000,
+    'disk' => 'local',
+    's3_disk' => '',
+    'mail_from' => 'hello@example.com',
+    'default_date_format' => 'yyyy-mm-dd',
+    'date_formats' => 
+    array (
+      0 => 'mm/dd/yyyy',
+      1 => 'yyyy-mm-dd',
+      2 => 'dd/mm/yyyy',
+      3 => 'd/m/yy',
+      4 => 'd-m-yy',
+      5 => 'd-m',
+      6 => 'm-yy',
+      7 => 'mm-dd-yy',
+      8 => 'm/d/yyyy',
+      9 => 'd-mmm-yy',
+      10 => 'd-mmm',
+      11 => 'mmm-yy',
+      12 => 'm/d/yy h:mm',
+      13 => 'm/d/yyyy h:mm',
+      14 => 'd/m/yy h:mm',
+      15 => 'h:mm AM/PM',
+      16 => 'h:mm:ss AM/PM',
+      17 => 'h:mm',
+      18 => 'h:mm:ss',
+      19 => 'mm:ss',
+      20 => 'h:mm:ss',
+      21 => 'i:s.S',
+      22 => 'h:mm:ss;@',
+      23 => 'yyyy/mm/dd;@',
+      24 => 'dddd, mmmm d, yyyy',
+      25 => 'm/d/yy h:mm',
+      26 => 'd/m/yy h:mm',
+      27 => 'h:mm AM/PM',
+      28 => 'h:mm:ss AM/PM',
+      29 => 'h:mm',
+      30 => 'h:mm:ss',
+      31 => 'mm:ss',
+      32 => 'h:mm:ss',
+      33 => 'i:s.S',
+      34 => 'h:mm:ss;@',
+    ),
+    'text_formats' => 
+    array (
+      0 => '@',
+      1 => 'General',
+    ),
+    'purge' => 
+    array (
+      'days' => 1,
+    ),
+  ),
+  'datatables-fractal' => 
+  array (
+    'includes' => 'include',
+    'serializer' => 'League\\Fractal\\Serializer\\DataArraySerializer',
   ),
   'tinker' => 
   array (

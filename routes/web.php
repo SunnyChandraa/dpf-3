@@ -9,6 +9,12 @@ use App\Http\Controllers\authentications\LoginBasic;
 use App\Http\Controllers\authentications\RegisterBasic;
 use App\Http\Middleware\SessionUserAdminCheck;
 use App\Http\Controllers\authentications\AuthController;
+use App\Http\Controllers\MBankController;
+use App\Http\Controllers\MCabangController;
+use App\Http\Controllers\MDivisiController;
+use App\Http\Controllers\MPosisiController;
+use App\Http\Controllers\MProjectController;
+use App\Http\Controllers\MTaskController;
 
 Route::get('/', [LoginBasic::class, 'index'])->name('main');
 
@@ -57,14 +63,28 @@ Route::group(['prefix' => 'admin', 'middleware' => SessionUserAdminCheck::class]
             return view('content.pages.master.master-project');
         })->name('master-project');
 
-        Route::get('master-task', function () {
-            return view('content.pages.master.master-task');
-        })->name('master-task');
+        Route::get('master-task', [MTaskController::class, 'index'])->name('master-task');
 
         Route::get('master-pegawai', function () {
             return view('content.pages.master.master-pegawai');
         })->name('master-pegawai');
-
     });
-
 });
+
+Route::get('/datatable-bank', [MBankController::class, 'getAllBankDataTable'])->name('datatable.bank');
+Route::post('/insert-bank', [MBankController::class, 'InsertDataBank'])->name('insert.bank');
+
+Route::get('/datatable-cabang', [MCabangController::class, 'getAllCabangDataTable'])->name('datatable.cabangDpf');
+Route::post('/insert-cabang', [MCabangController::class, 'InsertDataCabang'])->name('insert.cabang');
+
+Route::get('/datatable-divisi', [MDivisiController::class, 'getAllDivisiDataTable'])->name('datatable.divisi');
+Route::post('/insert-divisi', [MDivisiController::class, 'InsertDataDivisi'])->name('insert.divisi');
+
+Route::get('/datatable-posisi', [MPosisiController::class, 'getAllPosisiDataTable'])->name('datatable.posisi');
+Route::post('/insert-posisi', [MPosisiController::class, 'InsertDataPosisi'])->name('insert.posisi');
+
+Route::get('/datatable-project', [MProjectController::class, 'getAllProjectDataTable'])->name('datatable.project');
+Route::post('/insert-project', [MProjectController::class, 'InsertDataProject'])->name('insert.project');
+
+Route::get('/datatable-task', [MTaskController::class, 'getAllTaskDataTable'])->name('datatable.task');
+Route::post('/insert-task', [MTaskController::class, 'InsertDataTask'])->name('insert.task');

@@ -3,6 +3,7 @@
  */
 
 'use strict';
+import FormValidation from '@form-validation/core';
 
 let fv, offCanvasEl;
 document.addEventListener('DOMContentLoaded', function (e) {
@@ -409,7 +410,7 @@ $(function () {
           ]
         },
         {
-          text: '<i class="ti ti-plus me-sm-1"></i> <span class="d-none d-sm-inline-block">Add New Record</span>',
+          text: '<i class="ti ti-plus me-sm-1"></i> <span class="d-none d-sm-inline-block">Tambah Data</span>',
           className: 'create-new btn btn-primary waves-effect waves-light'
         }
       ],
